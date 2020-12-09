@@ -3,16 +3,18 @@
     "browser": true,
     "es6": true,
     "jest": true,
+    "jest/globals": true,
     "node": true
   },
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
+    "plugin:jest/recommended",
     "plugin:jsx-a11y/recommended",
-    "prettier",
     "plugin:prettier/recommended", // Make this the last element so prettier config overrides other formatting rules
+    "plugin:react-hooks/recommended",
+    "plugin:react/recommended",
+    "prettier",
     "prettier/@typescript-eslint"
   ],
   "parser": "@typescript-eslint/parser",
@@ -23,7 +25,7 @@
     "ecmaVersion": 2020,
     "sourceType": "module"
   },
-  "plugins": ["@typescript-eslint", "simple-import-sort"],
+  "plugins": ["@typescript-eslint", "simple-import-sort", "jest"],
   "root": true,
   "rules": {
     // "consistent-return": 0,
