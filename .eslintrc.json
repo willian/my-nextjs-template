@@ -7,10 +7,15 @@
   },
   "extends": [
     "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
     "plugin:jsx-a11y/recommended",
-    "plugin:prettier/recommended" // Make this the last element so prettier config overrides other formatting rules
+    "prettier",
+    "plugin:prettier/recommended", // Make this the last element so prettier config overrides other formatting rules
+    "prettier/@typescript-eslint"
   ],
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -18,25 +23,33 @@
     "ecmaVersion": 2020,
     "sourceType": "module"
   },
-  "plugins": ["simple-import-sort"],
+  "plugins": ["@typescript-eslint", "simple-import-sort"],
   "root": true,
   "rules": {
-    "consistent-return": 0,
-    "import/extensions": 0,
-    "jsx-a11y/anchor-is-valid": [
-      "error",
-      {
-        "aspects": ["invalidHref", "preferButton"],
-        "components": ["Link"],
-        "specialLink": ["hrefLeft", "hrefRight"]
-      }
-    ],
+    // "consistent-return": 0,
+    // "import/extensions": 0,
+    "jsx-a11y/anchor-is-valid": "off",
     "no-console": 0,
     "prettier/prettier": ["error", {}, { "usePrettierrc": true }], // Use our .prettierrc file as source
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
     "react/jsx-props-no-spreading": "off",
     "react/prop-types": "off",
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "react/display-name": 0,
+    "@typescript-eslint/explicit-function-return-type": [
+      "warn",
+      {
+        "allowExpressions": true,
+        "allowConciseArrowFunctionExpressionsStartingWithVoid": true
+      }
+    ],
+    // "@typescript-eslint/explicit-member-accessibility": 0,
+    // "@typescript-eslint/indent": 0,
+    // "@typescript-eslint/member-delimiter-style": 0,
+    // "@typescript-eslint/no-explicit-any": 0,
+    // "@typescript-eslint/no-use-before-define": 0,
+    // "@typescript-eslint/no-var-requires": 0,
+    "@typescript-eslint/no-unused-vars": ["error"]
   },
   "settings": {
     "react": {

@@ -18,4 +18,7 @@ module.exports = {
   },
   variants: {},
   plugins: [],
+  xwind: {
+    mode: 'objectstyles',
+  },
 }
