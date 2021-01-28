@@ -1,9 +1,7 @@
-export default function Home(): JSX.Element {
-  return (
-    <div>
-      <div className="py-20">
-        <h1 className="text-5xl text-center text-gray-700 dark:text-gray-100">Hello World</h1>
-      </div>
-    </div>
-  )
-}
+import { NextPage } from 'next'
+
+const HomePage: NextPage = () => (
+  <div className="text-gray-700 dark:text-white">Welcome to Next.js!</div>
+)
+
+export default HomePage
