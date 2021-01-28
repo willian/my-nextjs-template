@@ -1,18 +1,13 @@
 import { css, Global as EMGlobal } from '@emotion/react'
 import xw from 'xwind'
 
-const styles = Object.assign(
-  {},
-  {
-    '@viewport': {
-      'viewport-fit': 'cover',
-    },
+const styles = {
+  '@viewport': {
+    'viewport-fit': 'cover',
   },
-  {
-    'html, body': xw`bg-gray-50 dark:bg-gray-900`,
-  },
-)
+  'html, body': xw`bg-gray-50 dark:bg-gray-900`,
+}
 
-const Global = (): JSX.Element => <EMGlobal styles={css(styles)} />
-
-export default Global
+export default function Global(): JSX.Element {
+  return <EMGlobal styles={css(styles)} />
+}
