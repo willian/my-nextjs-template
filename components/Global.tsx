@@ -3,7 +3,7 @@ import xw from 'xwind'
 
 const styles = {
   '@viewport': {
-    'viewport-fit': 'cover',
+    viewportFit: 'cover',
   },
   'html, body': xw`bg-gray-50 dark:bg-gray-900`,
 }
